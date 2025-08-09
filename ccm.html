@@ -2,12 +2,12 @@
 <html data-wf-page="683205ce3c3b4ea8b6b87bf5" data-wf-site="682f5a8cf58ac9034f80ba80" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Remote Patient Monitoring - Monitor Your Health from Home | Heros</title>
-  <meta content="24/7 remote patient monitoring with smart devices. Track vitals, manage chronic conditions, and stay connected with your care team from home." name="description">
-  <meta content="Remote Patient Monitoring - Monitor Your Health from Home | Heros" property="og:title">
-  <meta content="24/7 remote patient monitoring with smart devices. Track vitals, manage chronic conditions, and stay connected with your care team from home." property="og:description">
-  <meta content="Remote Patient Monitoring - Monitor Your Health from Home | Heros" property="twitter:title">
-  <meta content="24/7 remote patient monitoring with smart devices. Track vitals, manage chronic conditions, and stay connected with your care team from home." property="twitter:description">
+  <title>Chronic Care Management - Comprehensive Support for Long-Term Health | Heros</title>
+  <meta content="Expert chronic care management for diabetes, hypertension, heart disease & more. Personalized care plans, medication management & 24/7 support." name="description">
+  <meta content="Chronic Care Management - Comprehensive Support for Long-Term Health | Heros" property="og:title">
+  <meta content="Expert chronic care management for diabetes, hypertension, heart disease & more. Personalized care plans, medication management & 24/7 support." property="og:description">
+  <meta content="Chronic Care Management - Comprehensive Support for Long-Term Health | Heros" property="twitter:title">
+  <meta content="Expert chronic care management for diabetes, hypertension, heart disease & more. Personalized care plans, medication management & 24/7 support." property="twitter:description">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -17,88 +17,138 @@
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
   <style>
-    /* RPM Specific Styles */
-    .rpm-hero-badge {
-      background: rgba(155, 126, 96, 0.1);
-      color: #9B7E60;
+    /* CCM Specific Styles */
+    .ccm-hero-badge {
+      background: rgba(112, 151, 143, 0.1);
+      color: #70978F;
       padding: 8px 16px;
       border-radius: 20px;
       font-size: 14px;
       font-weight: 600;
       display: inline-block;
       margin-bottom: 24px;
-      border: 1px solid rgba(155, 126, 96, 0.2);
+      border: 1px solid rgba(112, 151, 143, 0.2);
     }
     
-    .rpm-stats-grid {
+    .ccm-stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 32px;
       margin: 48px 0;
     }
     
-    .rpm-stat-card {
+    .ccm-stat-card {
       text-align: center;
       padding: 24px;
       background: #f8f9fa;
       border-radius: 16px;
     }
     
-    .rpm-stat-number {
+    .ccm-stat-number {
       font-size: 3rem;
       font-weight: 700;
       color: #2c3e50;
       font-family: 'Recoleta', serif;
     }
     
-    .rpm-stat-label {
+    .ccm-stat-label {
       font-size: 16px;
       color: #666;
       margin-top: 8px;
     }
     
-    .rpm-features-grid {
+    .ccm-conditions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 48px 0;
+    }
+    
+    .ccm-condition-card {
+      background: white;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(112, 151, 143, 0.1);
+      border: 1px solid #f1f1f1;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .ccm-condition-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(112, 151, 143, 0.15);
+    }
+    
+    .ccm-condition-icon {
+      font-size: 16px;
+      font-weight: 700;
+      color: #70978F;
+      margin-bottom: 16px;
+      width: 48px;
+      height: 48px;
+      background: rgba(112, 151, 143, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    
+    .ccm-condition-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+    
+    .ccm-condition-description {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .ccm-features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 32px;
       margin: 48px 0;
     }
     
-    .rpm-feature-card {
+    .ccm-feature-card {
       background: white;
       padding: 32px;
       border-radius: 24px;
-      box-shadow: 0 4px 24px rgba(155, 126, 96, 0.1);
+      box-shadow: 0 4px 24px rgba(112, 151, 143, 0.1);
       border: 1px solid #f1f1f1;
       position: relative;
       overflow: hidden;
     }
 
-    .rpm-feature-card::before {
+    .ccm-feature-card::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       height: 4px;
-      background: linear-gradient(90deg, #9B7E60, #70978F);
+      background: linear-gradient(90deg, #70978F, #9B7E60);
     }
 
-    .rpm-feature-icon {
+    .ccm-feature-icon {
       width: 64px;
       height: 64px;
-      background: rgba(155, 126, 96, 0.1);
+      background: rgba(112, 151, 143, 0.1);
       border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 24px;
-      color: #9B7E60;
-      font-size: 16px;
+      color: #70978F;
+      font-size: 18px;
       font-weight: 700;
     }
     
-    .rpm-feature-title {
+    .ccm-feature-title {
       font-size: 24px;
       font-weight: 600;
       color: #1a1a1a;
@@ -106,26 +156,37 @@
       font-family: 'Recoleta', serif;
     }
     
-    .rpm-feature-description {
+    .ccm-feature-description {
       color: #666;
       line-height: 1.6;
       margin-bottom: 24px;
     }
     
-    .rpm-pricing-card {
+    .ccm-pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+      margin: 48px 0;
+    }
+    
+    .ccm-pricing-card {
       background: white;
       border-radius: 24px;
-      padding: 48px 32px;
-      box-shadow: 0 8px 40px rgba(155, 126, 96, 0.15);
-      border: 2px solid #9B7E60;
+      padding: 40px 32px;
+      box-shadow: 0 8px 40px rgba(112, 151, 143, 0.1);
+      border: 2px solid #f1f1f1;
       position: relative;
       text-align: center;
-      max-width: 400px;
-      margin: 0 auto;
+      transition: all 0.3s ease;
     }
 
-    .rpm-pricing-badge {
-      background: linear-gradient(135deg, #9B7E60, #70978F);
+    .ccm-pricing-card.featured {
+      border-color: #70978F;
+      transform: scale(1.05);
+    }
+
+    .ccm-pricing-badge {
+      background: linear-gradient(135deg, #70978F, #9B7E60);
       color: white;
       padding: 8px 24px;
       border-radius: 20px;
@@ -137,48 +198,55 @@
       transform: translateX(-50%);
     }
 
-    .rpm-price {
-      font-size: 4rem;
+    .ccm-price {
+      font-size: 3.5rem;
       font-weight: 700;
       color: #2c3e50;
       font-family: 'Recoleta', serif;
       line-height: 1;
     }
     
-    .rpm-price-period {
+    .ccm-price-period {
       color: #666;
       font-size: 18px;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
     }
     
-    .rpm-benefits-list {
+    .ccm-plan-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+    
+    .ccm-benefits-list {
       text-align: left;
       margin: 32px 0;
     }
     
-    .rpm-benefit-item {
+    .ccm-benefit-item {
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     
-    .rpm-benefit-check {
-      color: #9B7E60;
-      font-size: 20px;
+    .ccm-benefit-check {
+      color: #70978F;
+      font-size: 18px;
       margin-top: 2px;
       flex-shrink: 0;
     }
     
     .urgency-banner {
-      background: rgba(155, 126, 96, 0.1);
-      color: #9B7E60;
+      background: rgba(112, 151, 143, 0.1);
+      color: #70978F;
       padding: 12px 24px;
       border-radius: 8px;
       text-align: center;
       margin: 24px 0;
       font-weight: 600;
-      border: 1px solid rgba(155, 126, 96, 0.2);
+      border: 1px solid rgba(112, 151, 143, 0.2);
       animation: pulse 2s infinite;
     }
     
@@ -189,7 +257,7 @@
     }
     
     .cta-primary {
-      background: linear-gradient(135deg, #9B7E60, #70978F);
+      background: linear-gradient(135deg, #70978F, #9B7E60);
       color: white;
       padding: 16px 32px;
       border-radius: 32px;
@@ -198,20 +266,20 @@
       font-size: 18px;
       display: inline-block;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 16px rgba(155, 126, 96, 0.3);
+      box-shadow: 0 4px 16px rgba(112, 151, 143, 0.25);
     }
-    
+
     .cta-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(155, 126, 96, 0.4);
-      background: linear-gradient(135deg, #7d6549, #5d7a74);
+      box-shadow: 0 8px 24px rgba(112, 151, 143, 0.35);
+      background: linear-gradient(135deg, #5d7a74, #7d6549);
     }
 
     .cta-secondary {
       background: transparent;
-      color: #9B7E60;
+      color: #70978F;
       padding: 16px 32px;
-      border: 2px solid #9B7E60;
+      border: 2px solid #70978F;
       border-radius: 32px;
       text-decoration: none;
       font-weight: 600;
@@ -222,7 +290,7 @@
     }
 
     .cta-secondary:hover {
-      background: #9B7E60;
+      background: #70978F;
       color: white;
     }
     
@@ -272,19 +340,70 @@
       font-size: 14px;
     }
     
+    .care-team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin: 48px 0;
+    }
+    
+    .care-team-member {
+      text-align: center;
+      background: white;
+      padding: 32px 24px;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(112, 151, 143, 0.1);
+    }
+    
+    .care-team-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 24px;
+      background: #f1f1f1;
+    }
+    
+    .care-team-name {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+    
+    .care-team-role {
+      color: #70978F;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    
+    .care-team-description {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
     @media (max-width: 768px) {
-      .rpm-stats-grid {
+      .ccm-stats-grid {
         grid-template-columns: 1fr 1fr;
         gap: 16px;
       }
       
-      .rpm-features-grid {
+      .ccm-features-grid {
         grid-template-columns: 1fr;
         gap: 24px;
       }
       
-      .rpm-price {
-        font-size: 3rem;
+      .ccm-pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      
+      .ccm-pricing-card.featured {
+        transform: none;
+      }
+      
+      .ccm-price {
+        font-size: 2.5rem;
       }
       
       .cta-secondary {
@@ -367,19 +486,19 @@ margin: 0rem !important;
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5008 5.31968C12.6231 5.57162 12.4341 5.85113 12.1562 5.88623C9.14903 6.26604 6.76604 8.64903 6.38623 11.6562C6.35113 11.9341 6.07162 12.1231 5.81968 12.0008C4.15065 11.1908 3 9.47979 3 7.5C3 4.73858 5.23858 2.5 8 2.5C9.97979 2.5 11.6908 3.65065 12.5008 5.31968Z" fill="currentcolor"></path>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8971 8.42438C15.0798 7.84233 14.0799 7.5 13 7.5C10.2386 7.5 8 9.73858 8 12.5C8 13.5799 8.34233 14.5798 8.92438 15.3971L15.8971 8.42438ZM17.0756 9.60289L10.1029 16.5756C10.9202 17.1577 11.9201 17.5 13 17.5C15.7614 17.5 18 15.2614 18 12.5C18 11.4201 17.6577 10.4202 17.0756 9.60289Z" fill="currentcolor"></path>
           </svg></div>
-        <div class="text-opacity-50 text-size-small">50,000+ patients monitored daily</div>
-      </div>
-      <div class="div-block">
-        <div class="icon-1x1-small w-embed"><svg width="17" height="16" viewbox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4998 5.33333H11.8332V4C11.8332 3.26667 11.2332 2.66667 10.4998 2.66667H2.49984C1.7665 2.66667 1.1665 3.26667 1.1665 4V10C1.1665 10.7333 1.7665 11.3333 2.49984 11.3333C2.49984 12.44 3.39317 13.3333 4.49984 13.3333C5.6065 13.3333 6.49984 12.44 6.49984 11.3333H10.4998C10.4998 12.44 11.3932 13.3333 12.4998 13.3333C13.6065 13.3333 14.4998 12.44 14.4998 11.3333H15.1665C15.5332 11.3333 15.8332 11.0333 15.8332 10.6667V8.44667C15.8332 8.16 15.7398 7.88 15.5665 7.64667L14.0332 5.6C13.9065 5.43333 13.7065 5.33333 13.4998 5.33333ZM4.49984 12C4.13317 12 3.83317 11.7 3.83317 11.3333C3.83317 10.9667 4.13317 10.6667 4.49984 10.6667C4.8665 10.6667 5.1665 10.9667 5.1665 11.3333C5.1665 11.7 4.8665 12 4.49984 12ZM13.4998 6.33333L14.8065 8H11.8332V6.33333H13.4998ZM12.4998 12C12.1332 12 11.8332 11.7 11.8332 11.3333C11.8332 10.9667 12.1332 10.6667 12.4998 10.6667C12.8665 10.6667 13.1665 10.9667 13.1665 11.3333C13.1665 11.7 12.8665 12 12.4998 12Z" fill="currentcolor"></path>
-          </svg></div>
-        <div class="text-opacity-50 text-size-small">Free device delivery</div>
+        <div class="text-opacity-50 text-size-small">25,000+ chronic conditions managed</div>
       </div>
       <div class="div-block">
         <div class="icon-1x1-small w-embed"><svg width="17" height="16" viewbox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1667 2H3.83333C3.1 2 2.5 2.6 2.5 3.33333V12.6667C2.5 13.4 3.1 14 3.83333 14H13.1667C13.9 14 14.5 13.4 14.5 12.6667V3.33333C14.5 2.6 13.9 2 13.1667 2ZM5.83333 11.3333C5.46667 11.3333 5.16667 11.0333 5.16667 10.6667V7.33333C5.16667 6.96667 5.46667 6.66667 5.83333 6.66667C6.2 6.66667 6.5 6.96667 6.5 7.33333V10.6667C6.5 11.0333 6.2 11.3333 5.83333 11.3333ZM8.5 11.3333C8.13333 11.3333 7.83333 11.0333 7.83333 10.6667V5.33333C7.83333 4.96667 8.13333 4.66667 8.5 4.66667C8.86667 4.66667 9.16667 4.96667 9.16667 5.33333V10.6667C9.16667 11.0333 8.86667 11.3333 8.5 11.3333ZM11.1667 11.3333C10.8 11.3333 10.5 11.0333 10.5 10.6667V9.33333C10.5 8.96667 10.8 8.66667 11.1667 8.66667C11.5333 8.66667 11.8333 8.96667 11.8333 9.33333V10.6667C11.8333 11.0333 11.5333 11.3333 11.1667 11.3333Z" fill="currentcolor"></path>
           </svg></div>
-        <div class="text-opacity-50 text-size-small">24/7 monitoring</div>
+        <div class="text-opacity-50 text-size-small">Evidence-based care plans</div>
+      </div>
+      <div class="div-block">
+        <div class="icon-1x1-small w-embed"><svg width="17" height="16" viewbox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4998 5.33333H11.8332V4C11.8332 3.26667 11.2332 2.66667 10.4998 2.66667H2.49984C1.7665 2.66667 1.1665 3.26667 1.1665 4V10C1.1665 10.7333 1.7665 11.3333 2.49984 11.3333C2.49984 12.44 3.39317 13.3333 4.49984 13.3333C5.6065 13.3333 6.49984 12.44 6.49984 11.3333H10.4998C10.4998 12.44 11.3932 13.3333 12.4998 13.3333C13.6065 13.3333 14.4998 12.44 14.4998 11.3333H15.1665C15.5332 11.3333 15.8332 11.0333 15.8332 10.6667V8.44667C15.8332 8.16 15.7398 7.88 15.5665 7.64667L14.0332 5.6C13.9065 5.43333 13.7065 5.33333 13.4998 5.33333ZM4.49984 12C4.13317 12 3.83317 11.7 3.83317 11.3333C3.83317 10.9667 4.13317 10.6667 4.49984 10.6667C4.8665 10.6667 5.1665 10.9667 5.1665 11.3333C5.1665 11.7 4.8665 12 4.49984 12ZM13.4998 6.33333L14.8065 8H11.8332V6.33333H13.4998ZM12.4998 12C12.1332 12 11.8332 11.7 11.8332 11.3333C11.8332 10.9667 12.1332 10.6667 12.4998 10.6667C12.8665 10.6667 13.1665 10.9667 13.1665 11.3333C13.1665 11.7 12.8665 12 12.4998 12Z" fill="currentcolor"></path>
+          </svg></div>
+        <div class="text-opacity-50 text-size-small">Monthly medication delivery</div>
       </div>
       <div class="div-block">
         <div class="icon-1x1-small w-embed"><svg width="17" height="16" viewbox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -401,8 +520,8 @@ margin: 0rem !important;
             <a href="mens-ed.html" class="nav_menu_link w-nav-link">Men's ED</a>
             <a href="skin-care.html" class="nav_menu_link w-nav-link">Skin Care</a>
             <a href="hair-regrowth.html" class="nav_menu_link w-nav-link">Hair Regrowth</a>
-            <a href="rpm.html" aria-current="page" class="nav_menu_link w-nav-link w--current">RPM</a>
-            <a href="ccm.html" class="nav_menu_link w-nav-link">CCM</a>
+            <a href="rpm.html" class="nav_menu_link w-nav-link">RPM</a>
+            <a href="ccm.html" aria-current="page" class="nav_menu_link w-nav-link w--current">CCM</a>
             <a href="nad-plus.html" class="nav_menu_link w-nav-link">NAD+</a>
             <a href="#" class="link-block _231 _2 w-inline-block">
               <div>Log in</div>
@@ -428,38 +547,90 @@ margin: 0rem !important;
             <div class="padding-section-hero">
               <div class="div-block-3 _2">
                 <div class="div-block-5 _2">
-                  <div class="rpm-hero-badge">🏆 #1 Rated Remote Monitoring Platform</div>
+                  <div class="ccm-hero-badge">Medicare & Insurance Approved</div>
                   
-                  <h1>Monitor Your Health 24/7 from the Comfort of Home</h1>
-                  <p class="text-weight-medium text-size-large">Advanced remote patient monitoring with smart devices that track your vitals, detect early warning signs, and keep your care team connected to your health—even when you're sleeping.</p>
+                  <h1>Expert Care for Your Chronic Conditions</h1>
+                  <p class="text-weight-medium text-size-large">Comprehensive chronic care management with personalized treatment plans, medication coordination, and 24/7 support. Finally, get the ongoing care your conditions deserve.</p>
                   
-                  <div class="urgency-banner">Limited time: Free device setup + First month monitoring included</div>
+                  <div class="urgency-banner">New patients get free consultation + 30% off first 3 months</div>
                   
                   <div style="margin-top: 32px;">
-                    <a href="#pricing" class="cta-primary">Start Monitoring Today</a>
-                    <a href="#how-it-works" class="cta-secondary">See How It Works</a>
+                    <a href="#pricing" class="cta-primary">Get Your Care Plan</a>
+                    <a href="#conditions" class="cta-secondary">See Conditions We Treat</a>
                   </div>
                   
                   <!-- Social Proof Stats -->
-                  <div class="rpm-stats-grid">
-                    <div class="rpm-stat-card">
-                      <div class="rpm-stat-number">94%</div>
-                      <div class="rpm-stat-label">Faster Health Issue Detection</div>
+                  <div class="ccm-stats-grid">
+                    <div class="ccm-stat-card">
+                      <div class="ccm-stat-number">89%</div>
+                      <div class="ccm-stat-label">Fewer Hospital Visits</div>
                     </div>
-                    <div class="rpm-stat-card">
-                      <div class="rpm-stat-number">78%</div>
-                      <div class="rpm-stat-label">Reduction in ER Visits</div>
+                    <div class="ccm-stat-card">
+                      <div class="ccm-stat-number">95%</div>
+                      <div class="ccm-stat-label">Better Medication Adherence</div>
                     </div>
-                    <div class="rpm-stat-card">
-                      <div class="rpm-stat-number">24/7</div>
-                      <div class="rpm-stat-label">Continuous Monitoring</div>
+                    <div class="ccm-stat-card">
+                      <div class="ccm-stat-number">24/7</div>
+                      <div class="ccm-stat-label">Care Team Access</div>
                     </div>
                   </div>
                 </div>
                 <div class="div-block-4">
                   <div id="w-node-_7105cf86-e8f5-3db2-1f6b-adbf946f19be-b6b87bf5" class="div-block-61" style="margin-bottom: -3px;">
-                    <img src="https://cdn.builder.io/api/v1/image/assets%2Fccd9f70175f8439fb03547c4e6ff8da2%2F7e5a19e68c6147f6ab93b52b6e13b23d?format=webp&width=800" loading="lazy" sizes="100vw" alt="Senior man monitoring his health vitals from home with advanced RPM technology" class="image">
+                    <img src="https://cdn.builder.io/api/v1/image/assets%2Fccd9f70175f8439fb03547c4e6ff8da2%2F3bf63a88f38648cfaeaac5d9ac5fa725?format=webp&width=800" loading="lazy" sizes="100vw" alt="Healthcare professional consulting with patients about chronic care management" class="image">
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditions We Treat Section -->
+      <div class="section_prm-2" id="conditions">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-medium">
+              <div style="text-align: center; margin-bottom: 64px;">
+                <h2 class="heading-style-h1">Conditions We Specialize In</h2>
+                <p class="text-size-large" style="color: #666; max-width: 600px; margin: 16px auto 0;">Expert management for the most common chronic conditions affecting millions of Americans</p>
+              </div>
+              
+              <div class="ccm-conditions-grid">
+                <div class="ccm-condition-card">
+                  <div class="ccm-condition-icon">DM</div>
+                  <h3 class="ccm-condition-title">Diabetes (Type 1 & 2)</h3>
+                  <p class="ccm-condition-description">Blood sugar monitoring, medication management, and lifestyle coaching</p>
+                </div>
+
+                <div class="ccm-condition-card">
+                  <div class="ccm-condition-icon">CV</div>
+                  <h3 class="ccm-condition-title">Heart Disease</h3>
+                  <p class="ccm-condition-description">Cardiac risk management, medication optimization, and lifestyle modifications</p>
+                </div>
+
+                <div class="ccm-condition-card">
+                  <div class="ccm-condition-icon">RESP</div>
+                  <h3 class="ccm-condition-title">COPD & Asthma</h3>
+                  <p class="ccm-condition-description">Respiratory monitoring, inhaler management, and exacerbation prevention</p>
+                </div>
+
+                <div class="ccm-condition-card">
+                  <div class="ccm-condition-icon">HTN</div>
+                  <h3 class="ccm-condition-title">Hypertension</h3>
+                  <p class="ccm-condition-description">Blood pressure monitoring, medication adjustments, and dietary guidance</p>
+                </div>
+
+                <div class="ccm-condition-card">
+                  <div class="ccm-condition-icon">MH</div>
+                  <h3 class="ccm-condition-title">Mental Health</h3>
+                  <p class="ccm-condition-description">Depression, anxiety management with therapy and medication coordination</p>
+                </div>
+
+                <div class="ccm-condition-card">
+                  <div class="ccm-condition-icon">MSK</div>
+                  <h3 class="ccm-condition-title">Arthritis & Pain</h3>
+                  <p class="ccm-condition-description">Pain management, mobility preservation, and inflammation control</p>
                 </div>
               </div>
             </div>
@@ -468,56 +639,56 @@ margin: 0rem !important;
       </div>
 
       <!-- Key Features Section -->
-      <div class="section_prm-2">
+      <div class="section_prm-3">
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-medium">
               <div style="text-align: center; margin-bottom: 64px;">
-                <h2 class="heading-style-h1">Why 94% of Patients Feel Safer with Our RPM</h2>
-                <p class="text-size-large" style="color: #666; max-width: 600px; margin: 16px auto 0;">Medical-grade monitoring that catches health changes before they become emergencies</p>
+                <h2 class="heading-style-h1">Why Our Patients Live Healthier Lives</h2>
+                <p class="text-size-large" style="color: #666; max-width: 600px; margin: 16px auto 0;">Comprehensive care management that goes beyond just medication</p>
               </div>
               
-              <div class="rpm-features-grid">
-                <div class="rpm-feature-card">
-                  <div class="rpm-feature-icon">VS</div>
-                  <h3 class="rpm-feature-title">Real-Time Vital Tracking</h3>
-                  <p class="rpm-feature-description">Monitor blood pressure, heart rate, oxygen levels, and weight automatically. Smart alerts notify your care team of any concerning changes instantly.</p>
-                  <a href="#pricing" class="button w-button">Get Started</a>
+              <div class="ccm-features-grid">
+                <div class="ccm-feature-card">
+                  <div class="ccm-feature-icon">CP</div>
+                  <h3 class="ccm-feature-title">Personalized Care Plans</h3>
+                  <p class="ccm-feature-description">Custom treatment plans designed by board-certified physicians based on your specific conditions, medications, and health goals. Updated monthly based on your progress.</p>
+                  <a href="#pricing" class="button w-button">Get Your Plan</a>
                 </div>
-                
-                <div class="rpm-feature-card">
-                  <div class="rpm-feature-icon">AI</div>
-                  <h3 class="rpm-feature-title">Early Warning System</h3>
-                  <p class="rpm-feature-description">AI-powered algorithms detect health patterns and potential issues days or weeks before symptoms appear, preventing costly emergency situations.</p>
-                  <a href="#pricing" class="button w-button">Get Started</a>
+
+                <div class="ccm-feature-card">
+                  <div class="ccm-feature-icon">Rx</div>
+                  <h3 class="ccm-feature-title">Medication Management</h3>
+                  <p class="ccm-feature-description">Complete medication review, interaction checking, adherence monitoring, and coordination with your pharmacy. Never miss a dose or worry about drug interactions again.</p>
+                  <a href="#pricing" class="button w-button">Get Your Plan</a>
                 </div>
-                
-                <div class="rpm-feature-card">
-                  <div class="rpm-feature-icon">24/7</div>
-                  <h3 class="rpm-feature-title">24/7 Care Team Access</h3>
-                  <p class="rpm-feature-description">Board-certified nurses and physicians monitor your data around the clock. Get immediate guidance when readings are outside normal ranges.</p>
-                  <a href="#pricing" class="button w-button">Get Started</a>
+
+                <div class="ccm-feature-card">
+                  <div class="ccm-feature-icon">RN</div>
+                  <h3 class="ccm-feature-title">Dedicated Care Coordinator</h3>
+                  <p class="ccm-feature-description">Your personal nurse care coordinator knows your medical history and is available for questions, appointment scheduling, and care coordination between specialists.</p>
+                  <a href="#pricing" class="button w-button">Get Your Plan</a>
                 </div>
-                
-                <div class="rpm-feature-card">
-                  <div class="rpm-feature-icon">APP</div>
-                  <h3 class="rpm-feature-title">Simple Setup & Use</h3>
-                  <p class="rpm-feature-description">Plug-and-play devices that automatically sync to our app. No technical skills required. Most patients are fully set up in under 15 minutes.</p>
-                  <a href="#pricing" class="button w-button">Get Started</a>
+
+                <div class="ccm-feature-card">
+                  <div class="ccm-feature-icon">VS</div>
+                  <h3 class="ccm-feature-title">Health Monitoring & Alerts</h3>
+                  <p class="ccm-feature-description">Track vital signs, symptoms, and medication adherence. Automated alerts notify your care team of concerning changes before they become emergencies.</p>
+                  <a href="#pricing" class="button w-button">Get Your Plan</a>
                 </div>
-                
-                <div class="rpm-feature-card">
-                  <div class="rpm-feature-icon">Rx</div>
-                  <h3 class="rpm-feature-title">Medication Reminders</h3>
-                  <p class="rpm-feature-description">Never miss a dose again. Smart reminders and adherence tracking help you stay on top of your medication schedule for better outcomes.</p>
-                  <a href="#pricing" class="button w-button">Get Started</a>
+
+                <div class="ccm-feature-card">
+                  <div class="ccm-feature-icon">MD</div>
+                  <h3 class="ccm-feature-title">Specialist Coordination</h3>
+                  <p class="ccm-feature-description">We coordinate with your specialists, primary care doctor, and other providers to ensure everyone is aligned on your treatment plan and goals.</p>
+                  <a href="#pricing" class="button w-button">Get Your Plan</a>
                 </div>
-                
-                <div class="rpm-feature-card">
-                  <div class="rpm-feature-icon">RPT</div>
-                  <h3 class="rpm-feature-title">Progress Reports</h3>
-                  <p class="rpm-feature-description">Detailed health reports shared with your doctor show trends, improvements, and areas needing attention. Better data means better care decisions.</p>
-                  <a href="#pricing" class="button w-button">Get Started</a>
+
+                <div class="ccm-feature-card">
+                  <div class="ccm-feature-icon">EDU</div>
+                  <h3 class="ccm-feature-title">Education & Self-Management</h3>
+                  <p class="ccm-feature-description">Learn to better manage your conditions with educational resources, symptom tracking tools, and lifestyle coaching from certified health educators.</p>
+                  <a href="#pricing" class="button w-button">Get Your Plan</a>
                 </div>
               </div>
             </div>
@@ -525,55 +696,43 @@ margin: 0rem !important;
         </div>
       </div>
 
-      <!-- How It Works Section -->
-      <div class="section_prm-3" id="how-it-works">
+      <!-- Care Team Section -->
+      <div class="section_prm-4">
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-medium">
-              <div class="div-block-8 _2">
-                <h2 class="heading-style-h1">Get Started in 3 Simple Steps</h2>
-                <p class="text-opacity-70 text-size-large">From signup to full monitoring in less than 48 hours</p>
+              <div style="text-align: center; margin-bottom: 64px;">
+                <h2 class="heading-style-h1">Meet Your Expert Care Team</h2>
+                <p class="text-size-large" style="color: #666; max-width: 600px; margin: 16px auto 0;">Board-certified physicians and nurse practitioners specializing in chronic disease management</p>
               </div>
-              <div class="spacer-4rem"></div>
               
-              <div class="div-block-41">
-                <div class="div-block-42">
-                  <img src="images/Rectangle-40234-2_1.avif" loading="lazy" sizes="100vw" srcset="images/Rectangle-40234-2_1Rectangle-40234-2.avif 500w, images/Rectangle-40234-2_1.avif 1248w" alt="RPM monitoring setup" class="image-5">
+              <div class="care-team-grid">
+                <div class="care-team-member">
+                  <img src="images/image-79.avif" loading="lazy" alt="Dr. Sarah Chen" class="care-team-photo">
+                  <h3 class="care-team-name">Dr. Sarah Chen, MD</h3>
+                  <p class="care-team-role">Chief Medical Officer</p>
+                  <p class="care-team-description">15+ years in endocrinology and diabetes management. Former Mayo Clinic physician specializing in complex chronic conditions.</p>
                 </div>
-                <div class="div-block-44">
-                  <div class="div-block-45">
-                    <h2 class="heading-style-h1">Simple Setup, Life-Changing Results</h2>
-                    <div class="div-block-46">
-                      <div class="div-block-48">
-                        <div class="div-block-47">
-                          <div class="text-size-small">1</div>
-                        </div>
-                        <div class="div-block-49">
-                          <h3 class="heading-style-h6">Quick Health Assessment</h3>
-                          <p class="text-size-small">Complete our 5-minute health questionnaire. Our care team reviews your conditions and recommends the right monitoring devices.</p>
-                        </div>
-                      </div>
-                      <div class="div-block-48">
-                        <div class="div-block-47">
-                          <div class="text-size-small">2</div>
-                        </div>
-                        <div class="div-block-49">
-                          <h3 class="heading-style-h6">Receive Your Devices</h3>
-                          <p class="text-size-small">Medical-grade devices arrive at your door within 2 days. Free setup support via video call if needed.</p>
-                        </div>
-                      </div>
-                      <div class="div-block-48">
-                        <div class="div-block-47">
-                          <div class="text-size-small">3</div>
-                        </div>
-                        <div class="div-block-49">
-                          <h3 class="heading-style-h6">Start Monitoring</h3>
-                          <p class="text-size-small">Begin daily readings. Your care team monitors everything and reaches out with any concerns or recommendations.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <a href="#pricing" class="cta-primary" style="margin-top: 32px;">Start Your Monitoring Journey</a>
-                  </div>
+                
+                <div class="care-team-member">
+                  <img src="images/image-81.avif" loading="lazy" alt="Maria Rodriguez" class="care-team-photo">
+                  <h3 class="care-team-name">Maria Rodriguez, NP</h3>
+                  <p class="care-team-role">Senior Care Coordinator</p>
+                  <p class="care-team-description">Certified diabetes educator with 12 years experience in chronic care management and patient education.</p>
+                </div>
+                
+                <div class="care-team-member">
+                  <img src="images/image-80.avif" loading="lazy" alt="Dr. James Wilson" class="care-team-photo">
+                  <h3 class="care-team-name">Dr. James Wilson, MD</h3>
+                  <p class="care-team-role">Cardiologist</p>
+                  <p class="care-team-description">Board-certified cardiologist with expertise in heart failure, hypertension, and cardiovascular risk management.</p>
+                </div>
+                
+                <div class="care-team-member">
+                  <img src="images/image-79.avif" loading="lazy" alt="Lisa Thompson" class="care-team-photo">
+                  <h3 class="care-team-name">Lisa Thompson, PharmD</h3>
+                  <p class="care-team-role">Clinical Pharmacist</p>
+                  <p class="care-team-description">Medication therapy management specialist focusing on polypharmacy and drug interaction prevention.</p>
                 </div>
               </div>
             </div>
@@ -586,42 +745,42 @@ margin: 0rem !important;
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-medium">
-              <h2 class="heading-style-h1 text-align-center">Real Stories from Patients Who Avoided Emergencies</h2>
+              <h2 class="heading-style-h1 text-align-center">Success Stories from Our Patients</h2>
               <div class="spacer-4rem"></div>
               
               <div class="div-block-54">
                 <div class="testimonial-card">
                   <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                  <p class="testimonial-text">"The RPM system caught my blood pressure spike at 3 AM before I even felt symptoms. The care team called within minutes and helped me avoid what could have been a stroke. This technology literally saved my life."</p>
+                  <p class="testimonial-text">"Before CCM, I was taking 8 different medications and constantly confused about dosing. My care coordinator Maria helped me organize everything and caught a dangerous drug interaction my doctor missed. My A1C is now the best it's been in 5 years."</p>
                   <div class="testimonial-author">
                     <img src="images/image-79.avif" loading="lazy" alt="Robert M." class="testimonial-avatar">
                     <div class="testimonial-info">
                       <h4>Robert M.</h4>
-                      <p>67, Diabetes & Hypertension</p>
+                      <p>68, Type 2 Diabetes & Heart Disease</p>
                     </div>
                   </div>
                 </div>
                 
                 <div class="testimonial-card">
                   <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                  <p class="testimonial-text">"My heart failure was getting worse, but I didn't realize it until my weight started trending up on the RPM system. The early detection let my doctor adjust my medication before I ended up in the hospital again."</p>
+                  <p class="testimonial-text">"Living with COPD was scary before I found Heros. Now I have a care plan that actually works, my medications are coordinated, and I haven't been to the ER in over a year. The peace of mind is priceless."</p>
                   <div class="testimonial-author">
-                    <img src="images/image-81.avif" loading="lazy" alt="Margaret K." class="testimonial-avatar">
+                    <img src="images/image-81.avif" loading="lazy" alt="Patricia K." class="testimonial-avatar">
                     <div class="testimonial-info">
-                      <h4>Margaret K.</h4>
-                      <p>73, Heart Failure</p>
+                      <h4>Patricia K.</h4>
+                      <p>71, COPD & Arthritis</p>
                     </div>
                   </div>
                 </div>
                 
                 <div class="testimonial-card">
                   <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                  <p class="testimonial-text">"As someone living alone, having 24/7 monitoring gives me peace of mind. The system is so easy to use, and knowing that medical professionals are watching my health makes me feel safer than ever."</p>
+                  <p class="testimonial-text">"Managing multiple chronic conditions was overwhelming until I started CCM. Having someone who understands my full medical picture and coordinates everything has been life-changing. I finally feel in control of my health."</p>
                   <div class="testimonial-author">
-                    <img src="images/image-80.avif" loading="lazy" alt="James P." class="testimonial-avatar">
+                    <img src="images/image-80.avif" loading="lazy" alt="Michael T." class="testimonial-avatar">
                     <div class="testimonial-info">
-                      <h4>James P.</h4>
-                      <p>82, COPD & High Blood Pressure</p>
+                      <h4>Michael T.</h4>
+                      <p>64, Diabetes, Hypertension & Depression</p>
                     </div>
                   </div>
                 </div>
@@ -632,60 +791,126 @@ margin: 0rem !important;
       </div>
 
       <!-- Pricing Section -->
-      <div class="section_prm-4" id="pricing">
+      <div class="section_prm-5" id="pricing">
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-medium">
               <div style="text-align: center; margin-bottom: 64px;">
-                <h2 class="heading-style-h1">Comprehensive Health Monitoring</h2>
-                <p class="text-size-large" style="color: #666; max-width: 600px; margin: 16px auto 0;">Everything you need to stay healthy and avoid preventable emergencies</p>
+                <h2 class="heading-style-h1">Choose Your Care Level</h2>
+                <p class="text-size-large" style="color: #666; max-width: 600px; margin: 16px auto 0;">Comprehensive chronic care management plans designed for different levels of support</p>
               </div>
               
-              <div class="rpm-pricing-card">
-                <div class="rpm-pricing-badge">Most Popular</div>
-                <div class="rpm-price">$149</div>
-                <div class="rpm-price-period">per month</div>
-                
-                <div class="rpm-benefits-list">
-                  <div class="rpm-benefit-item">
-                    <span class="rpm-benefit-check">✓</span>
-                    <span>All medical-grade monitoring devices included</span>
+              <div class="ccm-pricing-grid">
+                <div class="ccm-pricing-card">
+                  <h3 class="ccm-plan-title">Essential Care</h3>
+                  <div class="ccm-price">$99</div>
+                  <div class="ccm-price-period">per month</div>
+                  
+                  <div class="ccm-benefits-list">
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Monthly care plan review</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Medication management & coordination</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Basic health monitoring</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Care team access during business hours</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Educational resources</span>
+                    </div>
                   </div>
-                  <div class="rpm-benefit-item">
-                    <span class="rpm-benefit-check">✓</span>
-                    <span>24/7 monitoring by licensed healthcare professionals</span>
-                  </div>
-                  <div class="rpm-benefit-item">
-                    <span class="rpm-benefit-check">✓</span>
-                    <span>Real-time alerts for concerning health changes</span>
-                  </div>
-                  <div class="rpm-benefit-item">
-                    <span class="rpm-benefit-check">✓</span>
-                    <span>Monthly progress reports shared with your doctor</span>
-                  </div>
-                  <div class="rpm-benefit-item">
-                    <span class="rpm-benefit-check">✓</span>
-                    <span>Medication reminders and adherence tracking</span>
-                  </div>
-                  <div class="rpm-benefit-item">
-                    <span class="rpm-benefit-check">✓</span>
-                    <span>Free device replacement if needed</span>
-                  </div>
-                  <div class="rpm-benefit-item">
-                    <span class="rpm-benefit-check">✓</span>
-                    <span>Mobile app with easy-to-read health trends</span>
-                  </div>
-                  <div class="rpm-benefit-item">
-                    <span class="rpm-benefit-check">✓</span>
-                    <span>Cancel anytime, no long-term contracts</span>
-                  </div>
+                  
+                  <a href="#" class="cta-primary" style="width: 100%; text-align: center;">Start Essential Care</a>
                 </div>
                 
-                <div class="urgency-banner">First 100 patients get 50% off setup fees</div>
+                <div class="ccm-pricing-card featured">
+                  <div class="ccm-pricing-badge">Most Popular</div>
+                  <h3 class="ccm-plan-title">Comprehensive Care</h3>
+                  <div class="ccm-price">$189</div>
+                  <div class="ccm-price-period">per month</div>
+                  
+                  <div class="ccm-benefits-list">
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Everything in Essential Care</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>24/7 care team access</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Advanced health monitoring with devices</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Dedicated nurse care coordinator</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Specialist appointment coordination</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Emergency care planning</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Family caregiver support</span>
+                    </div>
+                  </div>
+                  
+                  <div class="urgency-banner">Save 30% - First 3 months at $132/month</div>
+                  
+                  <a href="#" class="cta-primary" style="width: 100%; text-align: center;">Start Comprehensive Care</a>
+                </div>
                 
-                <a href="#" class="cta-primary" style="width: 100%; text-align: center; margin-top: 24px;">Start Monitoring Now</a>
-                <p style="font-size: 14px; color: #666; margin-top: 16px; text-align: center;">✅ No insurance required • ✅ 30-day money-back guarantee</p>
+                <div class="ccm-pricing-card">
+                  <h3 class="ccm-plan-title">Premium Care</h3>
+                  <div class="ccm-price">$299</div>
+                  <div class="ccm-price-period">per month</div>
+                  
+                  <div class="ccm-benefits-list">
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Everything in Comprehensive Care</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Weekly physician consultations</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Advanced diagnostic coordination</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Priority specialist referrals</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Home health service coordination</span>
+                    </div>
+                    <div class="ccm-benefit-item">
+                      <span class="ccm-benefit-check">✓</span>
+                      <span>Personalized lifestyle coaching</span>
+                    </div>
+                  </div>
+                  
+                  <a href="#" class="cta-primary" style="width: 100%; text-align: center;">Start Premium Care</a>
+                </div>
               </div>
+              
+              <p style="text-align: center; color: #666; margin-top: 32px; font-size: 16px;">✅ All plans include 30-day money-back guarantee • ✅ Many insurance plans provide reimbursement</p>
             </div>
           </div>
         </div>
@@ -701,7 +926,7 @@ margin: 0rem !important;
               <div class="w-layout-grid faq4_list">
                 <div class="faq4_accordion">
                   <div data-w-id="7ff60bb5-df1d-9e25-b845-3e5920bcb170" class="faq4_question">
-                    <div class="heading-style-h5">What conditions does RPM help monitor?</div>
+                    <div class="heading-style-h5">What is chronic care management?</div>
                     <div class="faq4_icon-wrappper">
                       <div class="icon-embed-1-25rem w-embed"><svg width="100%" height="100%" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor"></path>
@@ -710,13 +935,13 @@ margin: 0rem !important;
                   </div>
                   <div class="faq4_answer">
                     <div class="margin-bottom margin-small">
-                      <p>RPM is especially effective for diabetes, hypertension, heart failure, COPD, chronic kidney disease, and post-surgical recovery. Our system monitors vital signs relevant to your specific conditions and medication regimens.</p>
+                      <p>Chronic care management (CCM) is comprehensive, ongoing healthcare for patients with chronic conditions like diabetes, heart disease, or COPD. It includes medication management, care coordination, health monitoring, and personalized treatment planning to help you manage your conditions and prevent complications.</p>
                     </div>
                   </div>
                 </div>
                 <div class="faq4_accordion">
                   <div data-w-id="7ff60bb5-df1d-9e25-b845-3e5920bcb17a" class="faq4_question">
-                    <div class="heading-style-h5">How accurate are the monitoring devices?</div>
+                    <div class="heading-style-h5">Who is eligible for CCM services?</div>
                     <div class="faq4_icon-wrappper">
                       <div class="icon-embed-1-25rem w-embed"><svg width="100%" height="100%" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor"></path>
@@ -725,13 +950,13 @@ margin: 0rem !important;
                   </div>
                   <div class="faq4_answer">
                     <div class="margin-bottom margin-small">
-                      <p>All our devices are FDA-approved and meet hospital-grade accuracy standards. Blood pressure monitors are accurate within ±3 mmHg, pulse oximeters within ±2%, and weight scales within ±0.2 lbs. Regular calibration ensures continued accuracy.</p>
+                      <p>You're eligible if you have two or more chronic conditions lasting 12+ months, take multiple medications, or need ongoing medical management. Common qualifying conditions include diabetes, hypertension, heart disease, COPD, arthritis, chronic kidney disease, and depression.</p>
                     </div>
                   </div>
                 </div>
                 <div class="faq4_accordion">
                   <div data-w-id="7ff60bb5-df1d-9e25-b845-3e5920bcb184" class="faq4_question">
-                    <div class="heading-style-h5">What happens if my readings are abnormal?</div>
+                    <div class="heading-style-h5">Is CCM covered by insurance?</div>
                     <div class="faq4_icon-wrappper">
                       <div class="icon-embed-1-25rem w-embed"><svg width="100%" height="100%" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor"></path>
@@ -740,13 +965,13 @@ margin: 0rem !important;
                   </div>
                   <div class="faq4_answer">
                     <div class="margin-bottom margin-small">
-                      <p>Our care team receives immediate alerts for concerning readings. Depending on severity, we'll call you within 15 minutes to several hours. For emergencies, we guide you to call 911 or go to the ER. For less urgent issues, we coordinate with your doctor for medication adjustments or appointments.</p>
+                      <p>Yes! Medicare and many commercial insurance plans cover chronic care management services. We handle all insurance verification and billing. Even if not fully covered, CCM often saves money by preventing expensive ER visits and hospitalizations.</p>
                     </div>
                   </div>
                 </div>
                 <div class="faq4_accordion">
                   <div data-w-id="7ff60bb5-df1d-9e25-b845-3e5920bcb18e" class="faq4_question">
-                    <div class="heading-style-h5">Do I need internet or a smartphone?</div>
+                    <div class="heading-style-h5">How does CCM work with my current doctor?</div>
                     <div class="faq4_icon-wrappper">
                       <div class="icon-embed-1-25rem w-embed"><svg width="100%" height="100%" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor"></path>
@@ -755,13 +980,13 @@ margin: 0rem !important;
                   </div>
                   <div class="faq4_answer">
                     <div class="margin-bottom margin-small">
-                      <p>You need either WiFi or cellular data for the devices to transmit readings. Most devices have built-in cellular capability as backup. A smartphone or tablet helps you view your data, but it's not required—our care team monitors everything and will call you with updates.</p>
+                      <p>CCM enhances your existing care rather than replacing it. We coordinate with your primary care doctor and specialists, sharing progress reports and care plans. Your doctors remain the primary decision-makers for your treatment while we provide ongoing support and monitoring between visits.</p>
                     </div>
                   </div>
                 </div>
                 <div class="faq4_accordion">
                   <div data-w-id="7ff60bb5-df1d-9e25-b845-3e5920bcb198" class="faq4_question">
-                    <div class="heading-style-h5">Is RPM covered by insurance?</div>
+                    <div class="heading-style-h5">What's included in my care plan?</div>
                     <div class="faq4_icon-wrappper">
                       <div class="icon-embed-1-25rem w-embed"><svg width="100%" height="100%" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor"></path>
@@ -770,13 +995,13 @@ margin: 0rem !important;
                   </div>
                   <div class="faq4_answer">
                     <div class="margin-bottom margin-small">
-                      <p>Many Medicare and commercial insurance plans now cover RPM services. We handle insurance verification and billing for covered patients. Even without coverage, our $149/month fee is often less than a single ER visit copay, making it a cost-effective investment in your health.</p>
+                      <p>Your personalized care plan includes medication management, health goal tracking, symptom monitoring, lifestyle recommendations, emergency action plans, and coordination schedules with your healthcare providers. Plans are updated monthly based on your progress and changing needs.</p>
                     </div>
                   </div>
                 </div>
                 <div class="faq4_accordion">
                   <div data-w-id="7ff60bb5-df1d-9e25-b845-3e5920bcb1a2" class="faq4_question">
-                    <div class="heading-style-h5">Can I cancel anytime?</div>
+                    <div class="heading-style-h5">Can I cancel my CCM service?</div>
                     <div class="faq4_icon-wrappper">
                       <div class="icon-embed-1-25rem w-embed"><svg width="100%" height="100%" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor"></path>
@@ -785,7 +1010,7 @@ margin: 0rem !important;
                   </div>
                   <div class="faq4_answer">
                     <div class="margin-bottom margin-small">
-                      <p>Yes, there are no long-term contracts. Cancel anytime with 30 days notice. We offer a 30-day money-back guarantee if you're not satisfied. Simply return the devices in good condition within 30 days for a full refund.</p>
+                      <p>Yes, you can cancel anytime with 30 days notice. We offer a 30-day money-back guarantee if you're not satisfied with the service. However, most patients see significant improvements in their health management within the first 3 months.</p>
                     </div>
                   </div>
                 </div>
@@ -809,19 +1034,19 @@ margin: 0rem !important;
                   <div class="div-block-30">
                     <div class="div-block-31">
                       <div class="div-block-32">
-                        <h2 class="heading-style-h2 text-align-center">Take Control of Your Health Today</h2>
-                        <p class="text-size-large text-align-center">Join thousands of patients who are living healthier, safer lives with 24/7 monitoring.</p>
-                        <div class="urgency-banner">Limited Time: Free setup + First month included • Save $200</div>
+                        <h2 class="heading-style-h2 text-align-center">Stop Managing Alone. Start Living Better.</h2>
+                        <p class="text-size-large text-align-center">Join thousands of patients who have transformed their chronic condition management with expert care coordination.</p>
+                        <div class="urgency-banner">Limited Time: 30% off first 3 months + Free consultation</div>
                       </div>
                       <div style="text-align: center; margin-top: 32px;">
-                        <a href="#pricing" class="cta-primary" style="margin-right: 16px;">Start Monitoring Now</a>
+                        <a href="#pricing" class="cta-primary" style="margin-right: 16px;">Get Your Care Plan</a>
                         <a href="tel:+1702763-HERO" class="cta-secondary">Call +1 702763-HERO</a>
                       </div>
-                      <p style="text-align: center; color: #666; margin-top: 24px; font-size: 14px;">✅ 30-day money-back guarantee • ✅ No insurance required • ✅ Cancel anytime</p>
+                      <p style="text-align: center; color: #666; margin-top: 24px; font-size: 14px;">✅ 30-day money-back guarantee • ✅ Insurance billing available • ✅ No long-term contracts</p>
                     </div>
                   </div>
                 </div>
-                <img src="images/Rectangle-24-3_1.avif" loading="lazy" sizes="100vw" srcset="images/Rectangle-24-3_1Rectangle-24-3.avif 500w, images/Rectangle-24-3_1.avif 1376w" alt="Happy patient using RPM monitoring" class="image-3">
+                <img src="images/Rectangle-24-3_1.avif" loading="lazy" sizes="100vw" srcset="images/Rectangle-24-3_1Rectangle-24-3.avif 500w, images/Rectangle-24-3_1.avif 1376w" alt="Happy patient with chronic care management" class="image-3">
               </div>
             </div>
           </div>
@@ -850,8 +1075,8 @@ margin: 0rem !important;
                   <div class="div-block-39">
                     <a href="#" class="link">Our Story</a>
                     <a href="#" class="link">Clinical Team</a>
-                    <a href="#" class="link">Technology</a>
-                    <a href="#" class="link">Health Guide</a>
+                    <a href="#" class="link">Care Philosophy</a>
+                    <a href="#" class="link">Health Resources</a>
                     <a href="blog.html" class="link">Blog</a>
                   </div>
                 </div>
@@ -860,8 +1085,8 @@ margin: 0rem !important;
                   <div class="div-block-39">
                     <a href="contact.html" class="link">Contact us</a>
                     <a href="faq.html" class="link">FAQ</a>
-                    <a href="#" class="link">Device Support</a>
-                    <a href="#" class="link">Technical Help</a>
+                    <a href="#" class="link">Care Coordination</a>
+                    <a href="#" class="link">Insurance Help</a>
                   </div>
                 </div>
                 <div class="div-block-38">
@@ -892,7 +1117,7 @@ margin: 0rem !important;
               <div class="div-block-34">
                 <div class="div-block-36"></div>
                 <div class="div-block-37">
-                  <p>© 2025 Heros. All rights reserved | Medical services and devices are FDA-approved</p>
+                  <p>© 2025 Heros. All rights reserved | Licensed healthcare providers in all 50 states</p>
                 </div><img src="images/Logo-16.svg" loading="lazy" alt="Heros Logo" class="image-4">
               </div>
             </div>
